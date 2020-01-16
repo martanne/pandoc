@@ -503,6 +503,9 @@ getAllExtensions f = universalExtensions <> getAll f
   getAll "mediawiki"       = autoIdExtensions <>
     extensionsFromList
     [ Ext_smart ]
+  getAll "bbcode"          =
+    extensionsFromList
+    [ Ext_pandoc_title_block ]
   getAll _                 = mempty
 
 
